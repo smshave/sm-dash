@@ -23,35 +23,36 @@
     Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
   </title>
   <!-- Favicon -->
-  <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <!--Icons-->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-32x32.png">
-<link rel="manifest" href="assets/img/brand/browserconfig.xml">
-<link rel="mask-icon" href="assets/img/brand/safari-pinned-tab.svg" color="#0029ff">
-<link rel="shortcut icon" href="assets/img/brand/favicon.ico">
-<meta name="msapplication-TileColor" content="#00aba9">
-<meta name="theme-color" content="#ffffff">
-<!--Icons-->
+  <!-- Icons -->
+  <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <link href="../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "7fce8d3a-d845-4bcf-b49e-34a879362f18",
+    });
+  });
+</script>
 </head>
 
 <body class="">
-  <div class="main-content">
-    <!-- Navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a class="navbar-brand pt-0" href="index.html">
-        <img src="assets/img/brand/blue.png" height="100px" class="navbar-brand-img" alt="...">
+  <nav class="navbar navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/brand/blue.png" height="100px" class="navbar-brand-img" alt="...">
       </a>
       </div>
-    </nav>
-    <!-- End Navbar -->
+  </nav>
+  <div class="main-content">
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
       <div class="container-fluid">
@@ -77,16 +78,17 @@
     </div>
     </div>
     </div>
-
+   
     <!-- Last track event -->
     <div class="row mt-4">
-    <div class="col" id="last" >
-    
+    <div class="col" id="last">
+        
     <!-- Last track event here -->
-
+    
 </div>
 </div>
-
+</div>
+            
         </div>
       </div>
     </div>
@@ -96,20 +98,18 @@
         <div class="col">
          <div class="card">
             <div class="card-header bg-transparent">
-              <h3 class="mb-0" id=id data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Error, missing or wrong tracking code</h3>
+              <h3 class="mb-0" id=id>Error, missing tracking code</h3>
             </div>
-             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
               <div class="timeline timeline-one-side" data-timeline-content="axis" data-timeline-axis-style="dashed" id=output>
-
+                  
                   <!-- Track here -->
 
               </div>
-            </div>  
-          </div>  
+            </div>
+          </div>
         </div>
-  </div>
-</div>
+      </div>
       <!-- Footer -->
       <footer class="footer">
         <div class="row align-items-center justify-content-xl-between">
@@ -139,16 +139,16 @@
     </div>
   </div>
   <!--   Core   -->
-  <script src="assets/js/plugins/jquery/dist/jquery.min.js"></script>
-  <script src="assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
   <!--   Track   -->
-  <script src="assets/js/track.js"></script>
+  <script src="../assets/js/track.js"></script>
   <!--   Font awesome   -->
   <script src="https://kit.fontawesome.com/c31160c420.js"></script>
   <!--   Optional JS   -->
   <!--   Argon JS   -->
-  <script src="assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+  <script src="../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&

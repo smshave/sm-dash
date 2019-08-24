@@ -11,7 +11,7 @@ $("#trackingNumber").keyup(function(event) {
 
 function myFunction(){
 		var user_id=document.getElementById("trackingNumber").value;
-		window.location.href="?trackingNumber="+user_id+"&language=it";
+		window.location.href="?trackingNumber="+user_id+"&language=en";
 	}
 
 var trackid = window.location.search;
