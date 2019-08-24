@@ -30,7 +30,8 @@ var settings = {
 
 $.ajax(settings).done(function (jcontent){
     
-    	// Time last
+    
+     // Time last
 	var d1 = new Date(jcontent.shipments[0].status.timestamp);
 var formattedDate = d1.getDate() + "-" + (d1.getMonth() + 1) + "-" + d1.getFullYear();
 var hours = (d1.getHours() < 10) ? "0" + d1.getHours() : d1.getHours();
@@ -41,7 +42,7 @@ var formattedTime = hours + ":" + minutes;
     //Last color
     var color1 = "badge badge-pill badge-primary" ;
 var logo = "ni ni-spaceship" ;
- bagde = "badge badge-pill badge-primary" ;   
+ badge = "badge badge-pill badge-primary" ;   
 
   var event = jcontent.shipments[0].status.description;
 
@@ -49,19 +50,19 @@ if (event == 'Spedizione in consegna'|| event == 'With delivery courier'){
     var colork = "-info" ;
     logo = "ni ni-delivery-fast" ;
     color1 = "badge badge-pill badge-info" ;
-    bagde = "badge badge-pill badge-info" ;
+    badge = "badge badge-pill badge-info" ;
     }
 else if (event == 'Spedizione ritirata' || event == 'Shipment picked up'  || event.includes("istruzioni") || event.includes("instruction")) {
     logo = "ni ni-box-2";
     colork = "-default" ;
     color1 = "badge badge-pill badge-default" ;
-    bagde = "badge badge-pill badge-default" ;
+    badge = "badge badge-pill badge-default" ;
 }
 else if (event.includes("Spedizione Consegnata") || event.includes("Delivered")){
     colork = "-success"  ;
     color1 = "badge badge-pill badge-success" ;
     logo = "ni ni-check-bold" ;
-    bagde = "badge badge-pill badge-success" ;
+    badge = "badge badge-pill badge-success" ;
 }
 else if (event.includes("Spedizione arrivata") || event.includes("Arrived at Delivery")){
     colork = "-warning"  ;
@@ -84,44 +85,44 @@ output.innerHTML = 'Spedizione : ' + jcontent.shipments[0].id;
 
 for (var i = 0; i < jcontent.shipments[0].events.length; i++) {
     
-  var color1 = "badge badge-pill badge-primary" ;
-var logo = "ni ni-spaceship" ;
-var bagde = "badge badge-pill badge-primary" ;   
+color1 = "badge badge-pill badge-primary" ;
+logo = "ni ni-spaceship" ;
+var bae = "badge badge-pill badge-primary" ;   
 
-  var event = jcontent.shipments[0].events[i].description;
+  event = jcontent.shipments[0].events[i].description;
 
 if (event == 'Spedizione in consegna'|| event == 'With delivery courier'){
     var color = "timeline-step badge-info" ;
-    var logo = "ni ni-delivery-fast" ;
-    var color1 = "badge badge-pill badge-info" ;
-    var bagde = "badge badge-pill badge-info" ;
+    logo = "ni ni-delivery-fast" ;
+    color1 = "badge badge-pill badge-info" ;
+    badge = "badge badge-pill badge-info" ;
     }
 else if (event == 'Spedizione ritirata' || event == 'Shipment picked up') {
-    var logo = "ni ni-box-2";
-    var color = "timeline-step badge-default" ;
-    var color1 = "badge badge-pill badge-default" ;
-    var bagde = "badge badge-pill badge-default" ;
+    logo = "ni ni-box-2";
+    color = "timeline-step badge-default" ;
+    color1 = "badge badge-pill badge-default" ;
+    badge = "badge badge-pill badge-default" ;
 }
 else if (event.includes("Spedizione Consegnata") || event.includes("Delivered")){
-    var color = "timeline-step badge-success"  ;
-    var color1 = "badge badge-pill badge-success" ;
-    var logo = "ni ni-check-bold" ;
-    var bagde = "badge badge-pill badge-success" ;
+    color = "timeline-step badge-success"  ;
+    color1 = "badge badge-pill badge-success" ;
+    logo = "ni ni-check-bold" ;
+    badge = "badge badge-pill badge-success" ;
 }
 else if (event.includes("Spedizione arrivata") || event.includes("Arrived at Delivery")){
-    var color = "timeline-step badge-warning"  ;
-    var color1 = "badge badge-pill badge-warning";
-    var logo = "ni ni-pin-3" ;
-    var bagde = "badge badge-pill badge-warning" ;
+    color = "timeline-step badge-warning"  ;
+    color1 = "badge badge-pill badge-warning";
+    logo = "ni ni-pin-3" ;
+    badge = "badge badge-pill badge-warning" ;
 }
 else if (event == 'Errore' || event == 'Error'){
-    var color = "timeline-step badge-allert"  ;
-    var color1 = "badge badge-pill badge-allert" ;
-    var logo = "ni ni-bell-55" ;
-    var bagde = "badge badge-pill badge-allert" ;
+    color = "timeline-step badge-allert"  ;
+    color1 = "badge badge-pill badge-allert" ;
+    logo = "ni ni-bell-55" ;
+    badge = "badge badge-pill badge-allert" ;
 }
 
-else  var color =  "timeline-step badge-primary" ;
+else  color =  "timeline-step badge-primary" ;
 
 
         // Time detail
