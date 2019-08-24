@@ -1,10 +1,13 @@
 
 
-$("#myBtn").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#myBtn").click();
+
+$("#trackingNumber").keyup(function(event) {
+    if (event.keyCode === ('Enter')) {
+  alert("Button code executed.");
     }
 });
+
+    
 
 function myFunction(){
 		var user_id=document.getElementById("trackingNumber").value;
@@ -23,7 +26,7 @@ var settings = {
     "Content-Type": "application/json",
   },
   "data": ""
-}
+};
 
 $.ajax(settings).done(function (jcontent){
     
@@ -42,9 +45,9 @@ if (event == 'Spedizione in consegna'|| event == 'With delivery courier'){
     var bagde = "badge badge-pill badge-info" ;
     }
 else if (event == 'Spedizione ritirata' || event == 'Shipment picked up'  || event.includes("istruzioni") || event.includes("instruction")) {
-    var logo = "ni ni-box-2"
-    var colork = "-default" 
-    var color1 = "badge badge-pill badge-default" 
+    var logo = "ni ni-box-2";
+    var colork = "-default" ;
+    var color1 = "badge badge-pill badge-default" ;
     var bagde = "badge badge-pill badge-default" ;
 }
 else if (event.includes("Spedizione Consegnata") || event.includes("Delivered")){
@@ -88,9 +91,9 @@ if (event == 'Spedizione in consegna'|| event == 'With delivery courier'){
     var bagde = "badge badge-pill badge-info" ;
     }
 else if (event == 'Spedizione ritirata' || event == 'Shipment picked up') {
-    var logo = "ni ni-box-2"
-    var color = "timeline-step badge-default" 
-    var color1 = "badge badge-pill badge-default" 
+    var logo = "ni ni-box-2";
+    var color = "timeline-step badge-default" ;
+    var color1 = "badge badge-pill badge-default" ;
     var bagde = "badge badge-pill badge-default" ;
 }
 else if (event.includes("Spedizione Consegnata") || event.includes("Delivered")){
@@ -124,6 +127,6 @@ output1.innerHTML += '<div class="timeline-block"><span class="' + color + '"><i
 document.getElementById("trackingNumber").value = jcontent.shipments[0].id;
 
 }
-})
+});
 
 
