@@ -77,12 +77,12 @@ else if (event == 'Errore' || event == 'Error'){
 else  colork =  "-primary" ;
    
    var last = document.getElementById('last');
-last.innerHTML += '<div class="card card-stats"><div class="card-body"><div class="row"><div class="col"><h5 class="card-title text-uppercase text-muted mb-0" id>' + formattedDate + '</h5><span class="h2 text' + colork + ' font-weight-bold mb-0">' + jcontent.shipments[0].status.description + '</span></div><div class="col-auto"><div class="icon icon-shape bg' + colork + ' text-white rounded-circle shadow"><i class="' + logo + '"></i></div></div></div><p class="mt-3 mb-0 text-sm"><span class="text mr-2"> Numero spedizione : </i></span><span class="text-nowrap">' + jcontent.shipments[0].id + '</span></p><p class="mt-3 mb-0 text-sm"> <span class="text-success mr-2"><i class="fas fa-map-marker-alt"></i> Da : </span> <span class="text-nowrap">' + jcontent.shipments[0].origin.address.addressLocality + '</span> </p><p class="mt-3 mb-0 text-sm"> <span class="text-success mr-2"><i class="fas fa-map-marker-alt"></i> A : </span> <span class="text-nowrap">' + jcontent.shipments[0].destination.address.addressLocality + '</span> </p></div></div>';
+last.innerHTML += '<div class="card card-stats"><div class="card-body"><div class="row"><div class="col"><h5 class="card-title text-uppercase text-muted mb-0" id>' + formattedDate + '</h5><span class="h2 text' + colork + ' font-weight-bold mb-0">' + jcontent.shipments[0].status.description + '</span></div><div class="col-auto"><div class="icon icon-shape bg' + colork + ' text-white rounded-circle shadow"><i class="' + logo + '"></i></div></div></div><p class="mt-3 mb-0 text-sm"><span class="text mr-2"> Shipping number : </i></span><span class="text-nowrap">' + jcontent.shipments[0].id + '</span></p><p class="mt-3 mb-0 text-sm"> <span class="text-success mr-2"><i class="fas fa-map-marker-alt"></i> Da : </span> <span class="text-nowrap">' + jcontent.shipments[0].origin.address.addressLocality + '</span> </p><p class="mt-3 mb-0 text-sm"> <span class="text-success mr-2"><i class="fas fa-map-marker-alt"></i> A : </span> <span class="text-nowrap">' + jcontent.shipments[0].destination.address.addressLocality + '</span> </p></div></div>';
    
 
 
 var output = document.getElementById('id');
-output.innerHTML = 'Spedizione : ' + jcontent.shipments[0].id;
+output.innerHTML = 'Shipping number ' + jcontent.shipments[0].id + ' details';
 
 for (var i = 0; i < jcontent.shipments[0].events.length; i++) {
     
