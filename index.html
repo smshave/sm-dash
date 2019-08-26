@@ -102,10 +102,10 @@ window.cookieconsent.initialise({
             <div class="card-body">
             <div class="row">
     <div class="col">
-        <i class="fab fa-dhl fa-5x"></i><h5 class="card-title text-uppercase text-muted mb-0">Tracking ordine</h5>
+        <i class="fab fa-dhl fa-5x"></i><h5 class="card-title text-uppercase text-muted mb-0">DHL Order tracking</h5>
         <form>
     <div class="form-group">
-        <label for="example-text-input" class="form-control-label">Numero di tracking :</label>
+        <label for="example-text-input" class="form-control-label">Tracking number :</label>
         <input class="form-control" type="text" value="" id="trackingNumber">
     </div>
     <input class="btn btn-primary" id="myBtn" type="button" value="Traccia" onclick="myFunction()"/>
@@ -122,8 +122,6 @@ window.cookieconsent.initialise({
     <div class="col" id="last">
         
     <!-- Last track event here -->
-    <!-- Last track event here -->
-    <!-- Last track event here -->
     
 </div>
 </div>
@@ -138,9 +136,10 @@ window.cookieconsent.initialise({
         <div class="col">
          <div class="card">
             <div class="card-header bg-transparent">
-              <h3 class="mb-0" id=id>Error, missing tracking code</h3>
+                <a data-toggle="collapse" aria-expanded="false" href="#collapse" role="button">
+              <h3 class="mb-0" id=id >Error, missing or wrong tracking code</h3></a>
             </div>
-            <div class="card-body">
+            <div class="card-body collapse" id="collapse">
               <div class="timeline timeline-one-side" data-timeline-content="axis" data-timeline-axis-style="dashed" id=output>
                   
                   <!-- Track here -->
@@ -174,6 +173,7 @@ window.cookieconsent.initialise({
                         </button></a>
                 </div>
                 <br>
+                <!-- Social Buttons end -->
                 <a class="nav-link">
                     SM Shave,<img width="16px" src="https://hello.smshave.com/src/images/Logo-A.png" alt="Logo" display="inline">, La tua nuova esperienza di rasatura, A con il Baffo, Your next shaving experience, and A with the mustache are trademarks and/or registered trademarks of SM Shave. </a>
     <a class="nav-item">
