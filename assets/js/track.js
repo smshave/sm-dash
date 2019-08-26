@@ -1,10 +1,10 @@
 
 
-
 $(document).keypress(function (e) {
     if (e.which == 13) {
+        event.preventDefault();
         var user_id=document.getElementById("trackingNumber").value;
-		window.location.href="?trackingNumber="+user_id+"&language=en";
+        window.location.href="?trackingNumber="+user_id+"&language=en";
     }
 });
 
