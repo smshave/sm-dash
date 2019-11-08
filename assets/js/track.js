@@ -35,7 +35,7 @@ $.ajax(settings).done(function (jcontent){
      // Time last
 	var d1 = new Date(jcontent.shipments[0].status.timestamp);
 var formattedDate = d1.getDate() + "-" + (d1.getMonth() + 1) + "-" + d1.getFullYear();
-var hours = d1.getHours();
+var hours = (d1.getHours() -1);
 var minutes = d1.getMinutes();
 var formattedTime = hours + ":" + minutes;
 	formattedDate = formattedDate + " " + formattedTime;
