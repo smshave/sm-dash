@@ -23,7 +23,7 @@ var settings = {
   "url": "https://api-eu.dhl.com/track/shipments" + trackid,
   "method": "GET",
   "headers": {
-    "DHL-API-Key": "dhl-try-it-out-key",
+    "DHL-API-Key": "demo-key",
     "Content-Type": "application/json",
   },
   "data": ""
